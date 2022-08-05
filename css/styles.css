@@ -34,12 +34,13 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 :root {
   --first-color: #2196f3;
   --second-color: #212121;
   --third-color: #757575;
+  --ico-color: #afb1b8;
 }
 
 .list {
@@ -89,6 +90,20 @@ body {
   color: var(--second-color);
 }
 
+.top-contacts-mail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  fill: currentColor;
+}
+
+.top-contacts-tel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  fill: currentColor;
+}
+
 .top-contacts {
   display: flex;
   column-gap: 50px;
@@ -111,6 +126,13 @@ body {
 
 .hero {
   background-color: #2f303a;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -158,6 +180,17 @@ body {
   column-gap: 30px;
 }
 
+.feature-ico-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 .feature-title {
   margin-bottom: 10px;
   font-weight: 700;
@@ -168,7 +201,7 @@ body {
   color: var(--second-color);
 }
 .feature-description {
-  width: 270px;
+  max-width: 270px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -230,6 +263,83 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--third-color);
+  margin-bottom: 16px;
+}
+
+.workers-soc {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.workers-soc-item {
+}
+
+.workers-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: var(--ico-color);
+}
+
+/* .workers-soc-icon {
+  fill: currentColor;
+} */
+
+.workers-soc-link:hover,
+.workers-soc-link:focus {
+  background-color: var(--first-color);
+  fill: #ffffff;
+}
+
+/* .workers-soc-link:hover, 
+.workers-soc-link:focus {
+  background-color: var(--first-color);
+}
+
+.workers-soc-link:hover .workers-soc-icon, 
+.workers-soc-link:focus .workers-soc-icon {
+  fill: white;
+} */
+
+.regular-clients {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.clients-list {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+
+.clients-item-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  fill: var(--ico-color);
+}
+
+.clients-item-link:hover,
+.clients-item-link:focus {
+  background-color: #ffffff;
+  border: 1px solid var(--first-color);
+  fill: var(--first-color);
 }
 
 /*---------------FOOTER---------------*/
@@ -238,6 +348,12 @@ body {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.bottom-content-centre {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
 }
 
 .bottom-webstudio {
@@ -274,6 +390,52 @@ body {
 .footer a:focus {
   color: var(--first-color);
 }
+
+.bottom-soc-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bottom-soc-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.site-soc {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.site-soc-item {
+}
+.site-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+}
+
+.site-soc-link:hover,
+.site-soc-link:focus {
+  background-color: var(--first-color);
+  fill: #ffffff;
+}
+
+.site-soc-icon {
+}
+
 /*---------------PORTFOLIO-MAIN---------------*/
 
 .portfolio-content {
@@ -317,6 +479,8 @@ button:focus {
 }
 
 .portfolio-list > li {
+  width: 370px;
+  height: 404px;
   border: 1px solid #eeeeee;
 }
 
@@ -333,15 +497,22 @@ button:focus {
 
 .portfolio-item-description {
   display: flex;
-  
+
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--third-color);
 }
 .portfolio-list-item {
-  width: 370px;
-  height: 404px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .img-description-box {
