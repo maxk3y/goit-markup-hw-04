@@ -13,6 +13,10 @@ ul {
   padding-left: 0;
 }
 
+img {
+  display: block;
+}
+
 button {
   cursor: pointer;
 }
@@ -478,10 +482,14 @@ button:focus {
   gap: 30px;
 }
 
+.portfolio-list-item > img {
+  width: 100%;
+}
+
 .portfolio-list > li {
-  width: 370px;
-  height: 404px;
   border: 1px solid #eeeeee;
+  max-width: 370px;
+  height: 404px;
 }
 
 .portfolio-item-title {
@@ -497,20 +505,14 @@ button:focus {
 
 .portfolio-item-description {
   display: flex;
-
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--third-color);
 }
-.portfolio-list-item {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 
-.portfolio-list-item:hover,
-.portfolio-list-item:focus {
+.li-box:hover,
+.li-box:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -518,6 +520,6 @@ button:focus {
 .img-description-box {
   padding-left: 24px;
   padding-right: 24px;
-  padding-top: 16px;
+  padding-top: 24px;
   padding-bottom: 20px;
 }
